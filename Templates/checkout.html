@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+    <style>
+        /* Style for header */
+        .header-container {
+            background-color: #003366; /* Set header background color to dark blue */
+            color: white; /* Set text color to white */
+            padding: 80px; /* Add padding */
+            text-align: center; /* Center align text */
+        }
+
+        /* Style for form container */
+        .form-container {
+            background-color: #003366; /* Set form background color to dark blue */
+            padding: 20px; /* Add padding */
+            color: white; /* Set text color to white */
+            border-radius: 10px; /* Add border radius */
+            width: 50%; /* Set width to 50% of the viewport */
+            margin: 60px auto; /* Center align horizontally */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+
+        /* Style for form input fields */
+        input[type="checkbox"] {
+            margin-right: 5px; /* Add margin right */
+        }
+
+        /* Style for submit button */
+        input[type="submit"] {
+            background-color: #007bff; /* Set button background color to blue */
+            color: white; /* Set text color to white */
+            padding: 10px 20px; /* Add padding */
+            border: none; /* Remove border */
+            border-radius: 10px; /* Add border radius */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        /* Style for outer container */
+        .outer-container {
+            text-align: center; /* Center align content */
+            margin-top: 20px; /* Add margin at the top */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header container -->
+    <div class="header-container">
+        <h1>Check Out</h1>
+    </div>
+
+    <!-- Form container -->
+    <div class="header-container">
+        <h1>Check Out</h1>
+    </div>
+
+    <div class="form-container">
+        <form method="POST">
+            <label for="id">Employee ID:</label><br>
+            <input type="text" id="id" name="id" required><br><br>
+
+            <label for="tasks_done">Tasks Done:</label><br>
+            <textarea id="tasks_done" name="tasks_done" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Check Out">
+        </form>
+    </div>
+</body>
+</html>

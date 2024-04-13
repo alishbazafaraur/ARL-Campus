@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin & HR Management Tool</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .banner {
+        background-color: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .title {
+        margin: 0;
+    }
+
+    .features {
+        text-align: center;
+    }
+
+    .feature {
+        background-color: #003366;
+        color: #fff;
+        padding: 15px;
+        cursor: pointer;
+        margin-top: 160px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 200px; 
+        display: inline-block;
+        margin-right: 40px; 
+        margin-left: 40px; 
+        border-radius: 10px;
+    }
+
+    .sub-feature {
+        background-color: #cce5ff;
+        padding: 10px;
+        display: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: middle;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<div class="banner">
+    <h1 class="title">Admin & HR Management Tool</h1>
+</div>
+
+<div class="features">
+    <div class="feature" id="recruitment">Recruitment</div>
+    <div class="feature" id="payroll">Payroll</div>
+    <div class="feature" id="performance">Performance</div>
+    <div class="feature" id="expense">Expense</div>
+    <div class="feature" id="training">Training & Development</div>
+    <div class="feature" id="resignation">Resignation & Off-boarding</div>
+    <div class="feature" id="helpdesk">Helpdesk</div>
+</div>
+
+<div class="sub-features">
+    <div class="sub-feature" id="recruitmentSub">
+        <table id="recruitmentTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="5">Recruitment</td>
+                <td>Manpower Requirements</td>
+            </tr>
+            <tr>
+                <td>Application Tracking System</td>
+            </tr>
+            <tr>
+                <td>Interview Scheduling</td>
+            </tr>
+            <tr>
+                <td>Onboarding</td>
+            </tr>
+            <tr>
+                <td>Budget & Estimated Salaries for New Hires</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="payrollSub">
+        <table id="payrollTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="4">Payroll</td>
+                <td>Tax & Compliance</td>
+            </tr>
+            <tr>
+                <td>Leave Encashment</td>
+            </tr>
+            <tr>
+                <td>Compensations</td>
+            </tr>
+            <tr>
+                <td>Employee Loans</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="performanceSub">
+        <table id="performanceTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="4">Performance</td>
+                <td>Evaluations</td>
+            </tr>
+            <tr>
+                <td>Appraisals</td>
+            </tr>
+            <tr>
+                <td>Probation periods</td>
+            </tr>
+            <tr>
+                <td>Objectives and KPIs</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="expenseSub">
+        <table id="expenseTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="4">Expense</td>
+                <td>Official Travels</td>
+            </tr>
+            <tr>
+                <td>Medical</td>
+            </tr>
+            <tr>
+                <td>Food</td>
+            </tr>
+            <tr>
+                <td>Other Claims & Reimbursements</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="trainingSub">
+        <table id="trainingTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Training & Development</td>
+                <td>Course Planning</td>
+            </tr>
+            <tr>
+                <td>Scheduling of Training Events</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="resignationSub">
+        <table id="resignationTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Resignation & Off-boarding</td>
+                <td>Resignation Requests</td>
+            </tr>
+            <tr>
+                <td>Exit Interview</td>
+            </tr>
+            <tr>
+                <td>Clearances</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="helpdeskSub">
+        <table id="helpdeskTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td>Helpdesk</td>
+                <td>Employee Issues/Complaints</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Event listeners to toggle sub-features
+    document.getElementById('recruitment').addEventListener('click', function() {
+        toggleSubFeature('recruitmentSub');
+    });
+
+    document.getElementById('payroll').addEventListener('click', function() {
+        toggleSubFeature('payrollSub');
+    });
+
+    document.getElementById('performance').addEventListener('click', function() {
+        toggleSubFeature('performanceSub');
+    });
+
+    document.getElementById('expense').addEventListener('click', function() {
+        toggleSubFeature('expenseSub');
+    });
+
+    document.getElementById('training').addEventListener('click', function() {
+        toggleSubFeature('trainingSub');
+    });
+
+    document.getElementById('resignation').addEventListener('click', function() {
+        toggleSubFeature('resignationSub');
+    });
+
+    document.getElementById('helpdesk').addEventListener('click', function() {
+        toggleSubFeature('helpdeskSub');
+    });
+
+    // Function to toggle sub-features
+    function toggleSubFeature(subFeatureId) {
+        var subFeature = document.getElementById(subFeatureId);
+        if (subFeature.style.display === 'none') {
+            subFeature.style.display = 'block';
+        } else {
+            subFeature.style.display = 'none';
+        }
+    }
+
+    // Dummy data for each sub-feature (not included for brevity)
+</script>
+
+</body>
+</html>

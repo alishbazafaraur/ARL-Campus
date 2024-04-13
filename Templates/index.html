@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance System</title>
+    <style>
+        /* Style for header and the sentence of Welcome to ARL Campus */
+        header {
+            background-color: #003366; /* Set header background color to dark blue */
+            padding: 80px 0; /* Add padding */
+            text-align: center; /* Center align text */
+            color: white; /* Set text color to white */
+        }
+
+        /* Style for buttons container that has the Welcome to ARL Campus*/
+        .button-container {
+            text-align: center; /* Center align buttons */
+            margin-top: 50px; /* Add margin at the top */
+        }
+
+        /* Style for buttons */
+        button {
+            background-color: #003366; /* Set button background color to dark blue */
+            color: white; /* Set text color to white */
+            padding: 20px 40px; /* Add padding */
+            border: none; /* Remove border */
+            border-radius: 25px; /* Add border radius */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin: 100px 20px; /* Add margin */
+            font-size: 20px; /* Set font size */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Welcome message -->
+        <h1>Welcome to ARL Campus</h1>
+    </header>
+
+    <!-- Buttons container -->
+    <div class="button-container">
+        <!-- Check In button -->
+        <a href="/checkin"><button>Check In</button></a>
+        <!-- Check Out button -->
+        <a href="/checkout"><button>Check Out</button></a>
+        <!-- Late Arrival button -->
+        <a href="/latearrival"><button>Late Arrival</button></a>
+    </div>
+</body>
+</html>

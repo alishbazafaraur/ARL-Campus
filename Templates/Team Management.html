@@ -1,0 +1,45 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>AI Project Management</h1>
+
+    <h2>My Teams</h2>
+    <ul class="team-members">
+        <li><a href="#">John Doe</a></li>
+        <li><a href="#">Alice Smith</a></li>
+        <li><a href="#">Bob Johnson</a></li>
+    </ul>
+
+
+    <h2>Projects</h2>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <a href="/project/{{ project.id }}">{{ project.name }}</a> - Status: {{ project.status }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Create New Project</h2>
+    <form action="/create_project" method="post">
+        <label for="name">Project Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Ongoing">Ongoing</option>
+            <option value="To Do">To Do</option>
+            <option value="Done">Done</option>
+        </select><br>
+        <button type="submit">Create Project</button>
+    </form>
+    
+</body>
+</html>

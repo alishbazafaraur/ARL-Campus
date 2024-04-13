@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave Management</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .banner {
+        background-color: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .title {
+        margin: 0;
+    }
+
+    .features {
+        text-align: center;
+    }
+
+    .feature {
+        background-color: #003366;
+        color: #fff;
+        padding: 15px; 
+        cursor: pointer;
+        margin-top: 140px; 
+        margin-bottom: 20px;
+        text-align: center;
+        width: 150px;
+        display: inline-block;
+        margin-right: 20px;
+        margin-left: 20px; 
+        border-radius: 10px;
+    }
+
+    .sub-feature {
+        background-color: #cce5ff;
+        padding: 10px;
+        display: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: middle;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<div class="banner">
+    <h1 class="title">Leave Management Tool</h1>
+</div>
+
+<div class="features">
+    <div class="feature" id="employeeLeave" onclick="openPage('employeeLeave.html')">Employee Leave</div>
+    <div class="feature" id="leaveRequests" onclick="openPage('leaveRequests.html')">Leave Requests</div>
+    <div class="feature" id="leaveBalance" onclick="openPage('leaveBalance.html')">Leave Balance</div>
+    <div class="feature" id="leaveReports" onclick="openPage('leaveReports.html')">Leave Reports</div>
+</div>
+
+<div class="sub-features">
+    <div class="sub-feature" id="employeeLeaveSub">
+        <table id="employeeLeaveTable">
+            <tr>
+                <th>Employee Name</th>
+                <th>Leave Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Reason</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>Vacation</td>
+                <td>2024-04-01</td>
+                <td>2024-04-05</td>
+                <td>Family trip</td>
+            </tr>
+            <!-- More dummy data rows can be added here -->
+        </table>
+    </div>
+
+    <div class="sub-feature" id="leaveRequestsSub">
+        <table id="leaveRequestsTable">
+            <tr>
+                <th>Employee Name</th>
+                <th>Leave Type</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Status</th>
+            </tr>
+            <!-- Dummy data will be inserted dynamically -->
+        </table>
+    </div>
+
+    <div class="sub-feature" id="leaveBalanceSub">
+        <table id="leaveBalanceTable">
+            <tr>
+                <th>Employee Name</th>
+                <th>Leave Type</th>
+                <th>Balance</th>
+            </tr>
+            <!-- Dummy data will be inserted dynamically -->
+        </table>
+    </div>
+
+    <div class="sub-feature" id="Time off Request">
+
+            <a href="/time_off_request" class="button">Time off Request</a>
+    </div>
+</div>
+
+
+</body>
+</html>

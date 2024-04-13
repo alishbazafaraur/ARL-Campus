@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check In</title>
+    <style>
+        /* Style for header */
+        header {
+            background-color: #003366; /* Set header background color to dark blue */
+            color: white; /* Set text color to white */
+            padding: 80px; /* Add padding */
+            text-align: center; /* Center align text */
+        }
+
+        /* Style for form container */
+        .form-container {
+            background-color: #003366; /* Set form background color to dark blue */
+            color: white; /* Set text color to white */
+            padding: 40px; /* Add padding */
+            border-radius: 20px; /* Add border radius */
+            width: 60%; /* Set width to 50% of the viewport */
+            margin: 60px auto; /* Center align horizontally */
+        }
+
+        /* Style for form input fields */
+        input[type="text"] {
+            width: 100%; /* Set input width to 100% */
+            padding: 10px; /* Add padding */
+            margin-bottom: 10px; /* Add margin bottom */
+            border-radius: 50px; /* Add border radius */
+            border: none; /* Remove border */
+        }
+
+        /* Style for submit button */
+        input[type="submit"] {
+            background-color: #007bff; /* Set button background color to blue */
+            color: white; /* Set text color to white */
+            padding: 10px 20px; /* Add padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Check In</h1>
+    </header>
+
+    <!-- Form container -->
+    <div class="form-container">
+        <form action="/checkin" method="post">
+            ID: <br>
+            <input type="text" name="id"><br>
+            Department: <br>
+            <input type="text" name="department"><br>
+            Tasks for the day (separate tasks with dots): <br>
+            <input type="text" name="tasks"><br>
+            <input type="submit" value="Check In">
+        </form>
+    </div>
+</body>
+</html>

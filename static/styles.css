@@ -1,0 +1,117 @@
+/* static/style.css */
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font from Google Fonts */
+    background-color: #f8f9fc; /* Light gray background color */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.container {
+    max-width: 800px; /* Adjusted maximum width for content */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 20px; /* Add padding around content */
+    background-color: #ffffff; /* White background color */
+    overflow: hidden; /* Clear floats */
+
+}
+
+h1 {
+    text-align: center; /* Center align main headline */
+    background-color: #1a237e; /* Dark navy blue background for headlines */
+    color: #ffffff; /* White text color */
+    padding: 20px; /* Add padding to main headline */
+    margin-top: 0; /* Remove top margin for main headline */
+    border-radius: 5px; /* Rounded corners for headlines */
+}
+
+h2, h3 {
+    background-color: #3f51b5; /* Adjusted background color for sub headlines */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px; /* Add padding to sub headlines */
+    margin-top: 0; /* Remove top margin for sub headlines */
+    border-radius: 5px; /* Rounded corners for sub headlines */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.navbar {
+    background-color: #1a237e; /* Dark navy blue navbar */
+    padding: 10px 0; /* Add padding to navbar */
+}
+
+.navbar a {
+    color: #ffffff; /* White text color for navbar links */
+    text-decoration: none;
+}
+
+.button {
+    background-color: #1a237e; /* Dark navy blue button */
+    color: #ffffff; /* White text color for buttons */
+    padding: 10px 20px; /* Add padding to buttons */
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #000051; /* Darker shade of navy blue on hover */
+}
+
+.project-link {
+    text-decoration: none; /* Remove underline */
+    color: #1a237e; /* Dark navy blue text color */
+  }
+  
+  .project-link:hover {
+    color: #000051; /* Darker shade on hover */
+  }
+
+.team-members {
+    background-color: #ffffff; /* White background for team members section */
+    padding: 10px 20px; /* Add padding to team members section */
+    border-radius: 5px; /* Rounded corners for team members section */
+    margin-top: 20px; /* Add top margin */
+}
+
+.team-members li {
+    margin-bottom: 5px;
+}
+
+.team-members a {
+    color: #1a237e; /* Dark navy blue text color for team member profile links */
+    text-decoration: none;
+    background-color: #ffffff; /* White background for team member profile links */
+    padding: 5px 10px; /* Add padding to team member profile links */
+    border-radius: 3px; /* Rounded corners for team member profile links */
+}
+
+.team-members a:hover {
+    background-color: #1a237e; /* Dark navy blue background on hover */
+    color: #ffffff; /* White text color on hover */
+}
+.footer {
+    text-align: center; /* Align button to the center */
+    margin-top: 20px; /* Add top margin */
+}
+
+.footer a.button {
+    background-color: #1a237e; /* Dark navy blue button */
+    color: #ffffff; /* White text color for buttons */
+    padding: 10px 20px; /* Add padding to buttons */
+    border: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from link */
+}
+
+.footer a.button:hover {
+    background-color: #000051; /* Darker shade of navy blue on hover */
+}

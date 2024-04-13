@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Work Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-container {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .form-container {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="number"],
+        .form-container textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>Remote Work Request</h1>
+    </div>
+
+    <div class="form-container">
+        {% if submitted %}
+            <h2>Remote Work Request Submitted</h2>
+            <p>ID: {{ id }}</p>
+            <p>Department: {{ department }}</p>
+            <p>Team Leader: {{ team_leader }}</p>
+            <p>Reason for Remote Work: {{ reason }}</p>
+            <p>Number of Days: {{ num_days }}</p>
+        {% else %}
+            <h2>Remote Work Request</h2>
+            <form method="POST">
+                <label for="id">ID:</label><br>
+                <input type="text" id="id" name="id" required><br>
+
+                <label for="department">Department:</label><br>
+                <input type="text" id="department" name="department" required><br>
+
+                <label for="team_leader">Team Leader:</label><br>
+                <input type="text" id="team_leader" name="team_leader" required><br>
+
+                <label for="reason">Reason for Remote Work:</label><br>
+                <textarea id="reason" name="reason" required></textarea><br>
+
+                <label for="num_days">Number of Days:</label><br>
+                <input type="number" id="num_days" name="num_days" required><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        {% endif %}
+    </div>
+</body>
+</html>

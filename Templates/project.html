@@ -1,0 +1,51 @@
+<!-- templates/project.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ project_info.name }} - Project Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>{{ project_info.name }} - Project Details</h1>
+
+    <h2>Status: {{ project_info.status }}</h2>
+
+    <h2>Tasks</h2>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.name }} - Priority: {{ task.priority }} | Status: {{ task.status }} | Assigned to: {{ task.assigned_to }}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Create New Task</h2>
+    <form action="/add_task/{{ project_info.id }}" method="post">
+        <label for="name">Task Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select><br>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="To Do">To Do</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+        </select><br>
+        <label for="assigned_to">Assigned To:</label>
+        <input type="text" id="assigned_to" name="assigned_to" required><br>
+        <button type="submit">Add Task</button>
+    </form>
+    <footer class="footer">
+        <a href="/" class="button">Back to Home</a>
+    </footer>
+</body>
+</html>
+</body>
+</html>

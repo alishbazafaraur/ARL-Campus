@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Management Tool</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .banner {
+        background-color: #003366;
+        color: #fff;
+        text-align: center;
+        padding: 100px 0;
+    }
+
+    .title {
+        margin: 0;
+    }
+
+    .features {
+        text-align: center;
+    }
+
+    .feature {
+        background-color: #003366;
+        color: #fff;
+        padding: 15px;
+        cursor: pointer;
+        margin-top: 160px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 200px; 
+        display: inline-block;
+        margin-right: 40px; 
+        margin-left: 40px; 
+        border-radius: 10px;
+    }
+
+    .sub-feature {
+        background-color: #cce5ff;
+        padding: 10px;
+        display: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: middle;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<div class="banner">
+    <h1 class="title">Project Management Tool</h1>
+</div>
+
+<div class="features">
+    <div class="feature" id="taskManagement">Task Management</div>
+    <div class="feature" id="projectRoadmap">Project Roadmap</div>
+    <div class="feature" id="meetingManagement">Meeting Management</div>
+    <div class="feature" id="progressTracking">Progress Tracking</div>
+</div>
+
+<div class="sub-features">
+    <div class="sub-feature" id="taskManagementSub">
+        <table id="taskManagementTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Task Management</td>
+                <td>Add New Task</td>
+            </tr>
+            <tr>
+                <td>List of Tasks</td>
+            </tr>
+            <tr>
+                <td>Task Details</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="projectRoadmapSub">
+        <table id="projectRoadmapTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="6">Project Roadmap</td>
+                <td>Timeline</td>
+            </tr>
+            <tr>
+                <td>Objectives</td>
+            </tr>
+            <tr>
+                <td>Milestones</td>
+            </tr>
+            <tr>
+                <td>Deliverables</td>
+            </tr>
+            <tr>
+                <td>Resources</td>
+            </tr>
+            <tr>
+                <td>Deadlines</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="meetingManagementSub">
+        <table id="meetingManagementTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="4">Meeting Management</td>
+                <td>Define Purpose/Agenda</td>
+            </tr>
+            <tr>
+                <td>Assign Tasks</td>
+            </tr>
+            <tr>
+                <td>Meeting Minutes</td>
+            </tr>
+            <tr>
+                <td>Schedule</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="sub-feature" id="progressTrackingSub">
+        <table id="progressTrackingTable">
+            <tr>
+                <th>Feature</th>
+                <th>Sub-feature</th>
+            </tr>
+            <tr>
+                <td rowspan="3">Progress Tracking</td>
+                <td>Project Goals</td>
+            </tr>
+            <tr>
+                <td>Status</td>
+            </tr>
+            <tr>
+                <td>Roadblocks</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Event listeners to toggle sub-features
+    document.getElementById('taskManagement').addEventListener('click', function() {
+        toggleSubFeature('taskManagementSub');
+    });
+
+    document.getElementById('projectRoadmap').addEventListener('click', function() {
+        toggleSubFeature('projectRoadmapSub');
+    });
+
+    document.getElementById('meetingManagement').addEventListener('click', function() {
+        toggleSubFeature('meetingManagementSub');
+    });
+
+    document.getElementById('progressTracking').addEventListener('click', function() {
+        toggleSubFeature('progressTrackingSub');
+    });
+
+    // Function to toggle sub-features
+    function toggleSubFeature(subFeatureId) {
+        var subFeature = document.getElementById(subFeatureId);
+        if (subFeature.style.display === 'none') {
+            subFeature.style.display = 'block';
+        } else {
+            subFeature.style.display = 'none';
+        }
+    }
+
+    // Dummy data for each sub-feature (not included for brevity)
+</script>
+
+</body>
+</html>
